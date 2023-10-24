@@ -1,0 +1,40 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - increase_demand
+
+entities:
+  - inc_percentage
+  - model
+
+slots:
+  model:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: model
+  numbered_models:
+    type: any
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+actions:
+  - action_show_models
+  - action_set_model
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+utter_ask_model:
+    - text: "Please choose a model from the following list:"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

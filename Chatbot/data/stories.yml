@@ -1,0 +1,17 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: increase demand story
+  steps:
+  - intent: increase_demand
+  - action: action_show_models
+  # - slot_was_set:
+  #   - numbered_models: null 
+  # - action: action_set_model
+

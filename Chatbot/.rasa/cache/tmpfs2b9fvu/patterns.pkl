@@ -1,0 +1,10 @@
+[
+  {
+    "name": "number",
+    "pattern": "\\b[0-9]+\\b"
+  },
+  {
+    "name": "numbers",
+    "pattern": "(\\b1\\b|\\b2\\b|\\b3\\b|\\b4\\b|\\b5\\b)"
+  }
+]
